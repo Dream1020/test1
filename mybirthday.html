@@ -1,0 +1,270 @@
+<!-- 
+    人生2.2正式版更新！
+.本次更新为强制更新，不可取消！
+.略微增加了熬夜猝死的几率以及上调了发际线高度。
+.修复了经常深夜EMO和熬夜的BUG。
+.略微下调了剧烈运动后的身体恢复速度！
+.身体各器官老化程度略微增加！
+.修复了一些已知BUG！
+ -->
+ <!DOCTYPE html> 
+ <html>
+ <head>
+     <meta charset="UTF-8"><!--做一个标准的时代好青年，当一个人见人爱的人-->
+         <meta name="author" content="dream-heart,1585749967@qq.com"><!--自己信息-->
+         <script type="text/javascript/test/css"></script>           <!-- 勇敢向前走 -->
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- 任何版本都用尽全力的来面对生活。 -->
+     <title>人生2.2版本正式启动！</title>
+ </head>
+ <style >
+     body {                                  /*身体内在*/
+         width: auto;                        /*跟随世界，随时扩大自己的格局*/
+         padding: 22px;                      /*如今达到的年龄*/
+         background: none;                   /*作为一位没有背景的人，我除了成功，别无选择*/
+         color: red;                       /*人生必定红红火火*/
+         height:100%;                        /*跟随党的脚步，走向巅峰*/
+         overflow:auto;}                     /*无论有多少艰难险阻，时刻能撑起责任*/
+     .life{                                  /*生活态度*/
+         font-size: 25px;                    /*生活会有人爱我的*/
+          text-align: center;                /*中规中矩，做时代好青年 */
+         padding: 0px;                       /*用最少的废话做事。*/
+         color: rgb(117, 4, 229);          /*人生必定红红火火*/
+         position: relative;                 /*自己的人生好不好自己说了算，生活只是相对而言的*/}
+     #nowdaytime{                            /*现在的生活*/
+         margin: 22px 22px;                  /*从22岁出发*/
+         position: relative;                 /*现在的生活相对而言，很好*/}
+     #date1{                                 /*人生第一次发展*/
+         margin-left: 7%;                    /*7岁开始接受教育 */
+         margin:0;                           /*从0岁出发*/
+         position: absolute;                 /*用绝对的力量来成就自己的人生*/}
+     #date2{                                 /*发展到青年后*/
+         margin-left: 45%;                   /*新的一岁，提高自己45%的边框，防御所有的困难 */
+         margin:22;                          /*到达现在22岁 */
+         position: relative;                 /*与去年相比，自己收获老多了*/}
+     #箭头{                                  /*标明人生方向*/
+         font-size: 30px;                    /*用自己的笔为武器，造就自己的人生*/
+         top: 200px;                         /*到达新的顶峰200*/
+         left: 22%;                          /*提高自己左脑的灵活*/
+         position: absolute;                 /*做个俗人，贪财好色的，不惧蜚语。*/
+         color:rgb(255, 0, 0);             /*心怀红色，造就一爱国之心*/ 
+         animation: move 1s 12 alternate;    /*每一秒，每一时都目标坚定勇往直前*/
+       /*动画名称 运动时间 运动次数infinite表示无限次 alternate往返效果相同*/}
+     a{                                      /*从此刻出发，从基础出发*/
+         margin: 22px;                       /*出生以22年*/
+         color:rgb(113, 14, 219);          /*人生必将大红大紫*/
+         font-size: 22px;                    /*用22岁画出最美的画卷*/}
+     #word{                                  /*人生格言*/
+         color:rgb(11, 128, 211);          /*用青春画出最美的颜色*/
+         font-size: 22px;                    /*吾虽22岁，但是会有爱别人到永远的决心*/
+         position: absolute;                 /*人生不是比较，而是闯出自己的世界*/
+         z-index: 10;                        /*用最大的积极态度面对人生*/}
+     #img1{                                  /*十分努力创造人生的生活*/
+         top: 100px;
+         left: 75%;
+         width:120px;
+         height:160px;
+         position:  absolute;}
+     .button
+     {
+         top: 70px;
+         left: 70%;
+         width:200px;
+         height:160px;
+         position:  absolute;
+     }
+     .showRightOverFlow{ /*右下角的烟花窗口*/
+             width: 240px;
+             height:180px;
+             position:absolute;
+             right:5%;/*靠近右边的距离*/
+             bottom:20%;/*靠近底部的距离*/
+             border: solid 1px #fff;/*边框以及边框的颜色*/
+         }
+     html{overflow:hidden;}
+     @keyframes move {
+             100% {transform: scale(1.5);/*变大1.2倍*/}
+         }
+ 
+ </style>
+ 
+ <!-- w现在的时间 -->
+ <script>
+ function nowday()
+         {
+         var futimg='2000/10/20 3:6:9';     // 生日时间
+         var date=new Date();
+         var nowtime = date.getTime(); // 现在时间转换为时间戳
+         var d1=date.toLocaleString();//  年/月/日 时:分:秒
+         var futruetime =  new Date(futimg).getTime(); // 未来时间转换为时间戳
+         var msec = nowtime-futruetime; // 毫秒 未来时间-现在时间
+         var time = (msec/1000);  // 毫秒/1000
+         var day = parseInt(time/86400); // 天  24*60*60*1000 
+         var hour = parseInt(time/3600)-24*day;    // 小时 60*60 总小时数-过去的小时数=现在的小时数 
+         var minute = parseInt(time%3600/60); // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
+         var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
+         document.getElementById("nowdaytime").innerHTML=
+         "现在时间： "+d1+"<br>我已经来到这个世界："+
+         day+"天"+hour+"小时"+minute+"分"+second+"秒了";
+         }
+      setInterval("nowday();",1000);
+ </script>
+ 
+ <!-- 过去和现在变化的文字 -->
+ <script >
+     
+         var name ="肩上有清风";
+         var height= 182;
+         var weight= 60;
+         var three_outlooks='true';
+         var old=21;
+         var handsome="一般";
+ 
+         var date= new Date();
+         var year=date.getFullYear();//年
+         var month=date.getMonth()+1;//月
+         var day=date.getDate();//日
+         var week=date.getDay();//星期
+         var hours=date.getHours();//时
+         var minutes=date.getMinutes()//分
+         var seconds=date.getSeconds();//秒
+ 
+         setTimeout(function  mylife_21()
+     {
+         document.getElementById("date1").innerHTML =
+                 "     姓名: <a>"+name +" </a>"+
+                 "<br> 三观: <a>"+three_outlooks+" </a>"+
+                 "<br> 英俊: <a>"+handsome+" </a>"+
+                 "<br> 升高: <a>"+height+"</a>CM"+
+                 "<br> 体重: <a>"+weight+" </a> KG"+
+                 "<br> 年龄: <a>"+old+" </a>岁";
+                 show1();
+                 mylife_22();
+     },4000);
+ 
+     setTimeout(function  mylife_22()
+     {
+         {
+             var old1=old+1;
+             var handsome="略帅";
+             var three_outlooks="+1";
+             document.getElementById("date2").innerHTML =
+                 "     姓名: <a>"+name +" </a>"+
+                 "<br> 三观: <a>"+three_outlooks+" </a>"+
+                 "<br> 英俊: <a>"+handsome+" </a>" +
+                 "<br> 升高: <a>"+height+"</a>CM"+
+                 "<br> 体重: <a>"+weight+" </a> KG"+
+                 "<br> 年龄: <a>"+old1+" </a>岁";  
+                 show();
+         }
+     },8000)
+     
+     
+     var ch="升级为-------->";
+     var k = 0;
+     function show1(){
+             var ch1=document.getElementById("箭头");
+             st =ch.substr(0,k+1);
+             ch1.innerHTML = st; 
+             k++;
+             var id=setTimeout("show1()",120);//时间延迟
+             if(k==ch.length)  clearTimeout(id);
+             }
+ 
+     var love="    <br><a>人生2.2正式版更新！</a><br>1.本次更新为强制更新，不可取消！<br>2.略微增加了熬夜猝死的几率以及上调了发际线高度。<br>4.修复了经常深夜EMO和熬夜的BUG。<br>3.略微下调了剧烈运动后的身体恢复速度！<br>5.身体各器官老化程度略微增加！<br>6.修复了一些已知BUG！<br>👨‍💻💪无人问津也好，技不如人也罢，你都要试着安静一下，去做自己该做的事，而不是让烦恼和焦虑毁掉你本就不多的热情和定力，心可以碎手不能停，该干什么干什么，在崩溃中继续前行，这才是一个成年人的素养。";
+     var j = 0;
+     function show(){  
+         var loveshe= document.getElementById("word");
+         st =love.substr(0,j+1);
+         loveshe.innerHTML = st+'🎂'; 
+         j++;
+         var id=setTimeout("show()",300);//时间延迟
+         if(j==love.length)  clearTimeout(id);
+         }
+ </script>
+ 
+ 
+ <!-- 烟花的定义 -->
+ <script type="text/javascript" src="http://down.hovertree.com/jquery/jquery-1.11.0.min.js"></script>
+ <script type="text/javascript" src="http://hovertree.com/texiao/html5/43/js/jquery.fireworks.js"></script>
+ <script type="text/javascript">
+     function fireworks(){  
+              $('.showRightOverFlow').fireworks({
+                sound: true, // sound effect
+                opacity: 0.9,//不透明度
+                weight: '100%',
+                height:'100%'
+            });
+            }    
+ </script>
+ 
+ <!-- 照片的消失 -->
+ <script>
+         var m=5;
+         
+     function showImg(){
+         m=5
+        timer();
+     }      
+     function hideImg(){
+         m=0;
+         timer();
+     }
+     function timer(){
+     var time=setInterval(function() {
+         if(m>0)  
+         {
+             var img=document.getElementById("img1");
+             img.style.display="block";
+             m--;
+         }
+         else  
+         {
+             var img=document.getElementById("img1");
+             m=5;
+             img.style.display="none";
+             clearInterval(time);
+         }
+       },1000);
+     }
+     function songplay(){
+
+     }
+ </script>
+ 
+ <!-- 音乐 -->
+<!-- <audio autoplay="autoplay" loop="loop" preload="auto"
+     src="http://music.163.com/song/media/outer/url?id=509313150.mp3"> 
+ </audio>   -->
+
+ <iframe frameborder="no"  marginwidth="0" marginheight="0" width=330 height=86 
+ src="https://music.163.com/outchain/player?type=2&id=509313150&auto=1&height=66"
+ style="bottom: 46%;right: 3%;position:absolute;z-index:2;"></iframe>
+
+  <body>
+     <body onload="mylife_21()" >
+     <div class="life">
+         人生2.2版本已开启,纪念与父母相遇的第22年！
+     </div>  
+     <body onload="mylife_22()" >
+     <div id="nowdaytime"></div>  
+     <div id="date1"></div>
+     <div id="箭头"> </div>
+     <div id="date2"></div>
+     <div id="word"></div>
+     <div class="button">
+     <input type="button" value="点击显示照片" onclick="showImg()" />
+     <input type="button" value="点击隐藏照片" onclick="hideImg()" />
+     </div>
+     <body onload="timer()" >
+         <body onload="showImg()" >
+ 
+     <img src="https://m.qpic.cn/psc?/V504eQGB3XpTIb2JluiK4RoOOf1eeVFO/ruAMsa53pVQWN7FLK88i5uYOgMEholO4BtxdklYn0x95*L0ElxBtQdCfQXNbsh.E49JmZDiDGXv3ifWTTIK.pGosNfbd5phs29mfVK8X.KA!/b&bo=QAZVCEAGVQgBByA!&rf=viewer_4" 
+         alt="点击显示照片" id="img1" style="display: none">
+     </div>
+     
+ 
+     <div class="showRightOverFlow">
+         <script>fireworks()</script>
+     </div>
+  </body>
+ </html>
