@@ -103,7 +103,7 @@
          var minute = parseInt(time%3600/60); // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
          var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
          document.getElementById("nowdaytime").innerHTML=
-         "现在时间： "+d1+"<br>我已经来到这个世界："+
+         "现在时间： "+d1+"  出生日期：2000/10/20"+"<br>我已经来到这个世界："+
          day+"天"+hour+"小时"+minute+"分"+second+"秒了";
          }
       setInterval("nowday();",1000);
@@ -258,7 +258,7 @@
      <body onload="timer()" >
          <body onload="showImg()" >
  
-     <img src="https://github.com/Dream1020/test1/blob/main/picture1.png?raw=true" 
+     <img src="https://github.com/Dream1020/test1/raw/main/picture1.png" 
          alt="帅炸了，照片显示不出来" id="img1" style="display: none">
      </div>
      
